@@ -1,7 +1,8 @@
 import os,sys,subprocess
 from os import path
 import shutil
-PATH="C:/Users/aksha/Downloads"
+desktop_path=""
+PATH=""
 os.chdir(PATH)
 files=os.listdir(PATH)
 for i in files:
@@ -25,7 +26,7 @@ if len(files)>=1:
         print(i)
     for f in files:
         folder=input(f"where do you want to store {f}: ")
-        os.chdir("C:/Users/aksha/Desktop")
+        os.chdir(desktop_path)
         if path.isdir(folder):
             folder_path=path.realpath(folder)
             os.chdir(PATH)
